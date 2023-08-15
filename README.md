@@ -1,3 +1,3 @@
 # zicare
 
-# How To Install
+## How To Install
