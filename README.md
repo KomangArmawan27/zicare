@@ -15,3 +15,21 @@ python -m pip install -r requirements.txt
 
 
 Finally for running application type `uvicorn index:app --reload` in terminal
+
+## Application Flow: Managing Patient Reservations
+1. Patient Table:
+   * The patients table stores personal information.
+2. Doctor Table:
+   * The doctors table contains detailed profiles of medical practitioners, capturing their qualifications and expertise.
+3. Doctor Slot Table:
+   * The doctor_slots table maintains information about doctor schedules, allowing reservations to be made for available time slots.
+4. Reservation Table:
+   * The reservations table handles booking details, recording patient and doctor IDs for each reservation.
+   * Before insertion, the system validates whether the chosen reservation date aligns with the doctor's availability.
+5. Reservation Process:
+   * A patient requests a reservation by specifying the desired doctor and preferred date.
+   * The system checks if the chosen doctor has an available slot on the requested date.
+   * If the slot is available, the system creates a reservation entry in the reservations table.
+   * If the slot is not available, the patient is notified about the unavailability and prompted to select an alternative date or doctor.
+6. Reservation Confirmation:
+   * Upon successful reservation, the system provides a confirmation to the patient, including reservation details and doctor's information.
