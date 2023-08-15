@@ -20,16 +20,16 @@ Finally for running application type `uvicorn index:app --reload` in terminal
 1. Patient Table:
    * The patients table stores personal information.
 2. Doctor Table:
-   * The doctors table contains detailed profiles of medical practitioners, capturing their qualifications and expertise.
+   * The doctors table contains the profiles of the doctors, include personal information and expertise.
 3. Doctor Slot Table:
-   * The doctor_slots table maintains information about doctor schedules, allowing reservations to be made for available time slots.
+   * The doctor_slots table stores information about doctor schedules, allowing reservations to be made for available time slots.
 4. Reservation Table:
    * The reservations table handles booking details, recording patient and doctor IDs for each reservation.
-   * Before insertion, the system validates whether the chosen reservation date aligns with the doctor's availability.
+   * Before insertion, the system validates if the chosen reservation date aligns with the doctor's availability.
 5. Reservation Process:
    * A patient requests a reservation by specifying the desired doctor and preferred date.
    * The system checks if the chosen doctor has an available slot on the requested date.
    * If the slot is available, the system creates a reservation entry in the reservations table.
-   * If the slot is not available, the patient is notified about the unavailability and prompted to select an alternative date or doctor.
+   * If the slot is not available, the patient get the message to select an alternative date or doctor.
 6. Reservation Confirmation:
-   * Upon successful reservation, the system provides a confirmation to the patient, including reservation details and doctor's information.
+   * If the reservation data was inputed, the system will give patients about reservation details and doctor's information.
