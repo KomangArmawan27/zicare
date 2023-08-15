@@ -1,4 +1,9 @@
-sqlalchemy
-pymysql
-uvicorn
+fastapi
+pydantic          
+pydantic_core     
+PyMySQL 
+SQLAlchemy       
+uvicorn           
+aiomysql
+databases
 virtualenv
